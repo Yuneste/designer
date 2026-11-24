@@ -1,0 +1,26 @@
+name: check
+# Proves the skill's scripts work on a fresh Windows, Mac and Linux machine with stock Node and the preinstalled Chrome.
+on: [push, pull_request, workflow_dispatch]
+jobs:
+  check:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+        node: [18, 22]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: '${{ matrix.node }}' }
+      - name: Ready check
+        run: node scripts/check.mjs
+      - name: Render the example designs
+        shell: bash
+        run: |
+          node scripts/render.mjs examples/menu.html out/menu.png 794 1123 --scale 2
+          node scripts/render.mjs examples/thumbnail.html out/thumbnail.png 1280 720
+          node scripts/sheet.mjs out/sheet.png out/menu.png out/thumbnail.png
+          node scripts/attention.mjs out/thumbnail.png out/attention.png
+      - uses: actions/upload-artifact@v4
+        with: { name: 'renders-${{ matrix.os }}-node${{ matrix.node }}', path: out/ }

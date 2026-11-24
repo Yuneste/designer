@@ -1,0 +1,27 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=JetBrains+Mono:wght@500;800&display=block" rel="stylesheet">
+<style>
+  html,body{margin:0;width:1280px;height:720px;overflow:hidden}
+  body{background:#10161f;color:#e9edf2;font-family:'JetBrains Mono',monospace;position:relative}
+  .grain{position:absolute;inset:0;opacity:.07;mix-blend-mode:screen;pointer-events:none}
+  .gutter{position:absolute;left:52px;top:70px;font-size:30px;line-height:62px;color:#3a4656;text-align:right;width:40px}
+  .code{position:absolute;left:120px;top:70px;font-size:30px;line-height:62px;color:#5d6b7e;white-space:pre}
+  .code .k{color:#7d8ba0}
+  .hero{position:absolute;left:112px;top:258px}
+  .todo{font-family:'JetBrains Mono';font-weight:800;font-size:58px;color:#8a97a8;letter-spacing:-.01em}
+  .todo s{text-decoration:none;position:relative;color:#5d6b7e}
+  .todo s::after{content:"";position:absolute;left:-6px;right:-6px;top:56%;height:9px;margin-top:-4px;background:#ff5a36;transform:rotate(-3deg);transform-origin:center}
+  .now{font-family:'Space Grotesk';font-weight:700;font-size:300px;line-height:.86;letter-spacing:-.04em;color:#ffb627;margin-top:14px}
+  .cursor{display:inline-block;width:40px;height:228px;background:#ffb627;margin-left:44px;opacity:.85;vertical-align:-8px}
+</style></head>
+<body>
+<svg class="grain" width="1280" height="720"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2"/></filter><rect width="100%" height="100%" filter="url(#n)"/></svg>
+<div class="gutter">41<br>42<br>43</div>
+<div class="code"><span class="k">function</span> startProject() {
+  <span class="k">// one more video first…</span></div>
+<div class="hero">
+  <div class="todo">// TODO: start <s>tomorrow</s></div>
+  <div class="now">NOW.<span class="cursor"></span></div>
+</div>
+</body></html>
