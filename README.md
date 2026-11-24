@@ -5,8 +5,17 @@ different route. Claude doesn't paint pixels with an image model. It **acts as a
 real fonts, a layout grid, colour, shapes and your own photos, renders it with the browser already on your computer,
 and checks its own work before you see it.
 
-![Three menu looks](examples/menu-mocks.png)
-![Three thumbnail looks](examples/thumbnail-mocks.png)
+<p align="center">
+<img src="examples/01-gym.jpg" width="32%"> <img src="examples/02-vape.jpg" width="32%"> <img src="examples/04-realestate.jpg" width="32%">
+</p>
+<p align="center">
+<img src="examples/03-thumbnail.jpg" width="65%">
+</p>
+<p align="center">
+<img src="examples/05-carwash.jpg" width="32%"> <img src="examples/06-sushi.jpg" width="32%"> <img src="examples/07-nightclub.jpg" width="27%">
+</p>
+
+<sub>All made with this skill from one-sentence requests. Businesses, prices and contact details are examples; brand-styled ones are unofficial demos, not made for or with those brands. Club photo: Pexels (free licence).</sub>
 
 ## What it does
 - **Asks 2-5 quick questions** you answer with a click (it writes the words for you if you want).
@@ -49,7 +58,7 @@ Your files land in `designs/` in the folder you're working in.
 
 ## Good to know
 - It never fakes photos or faces. Give it your own photo (your face, product, shop) and it designs around it.
-- It never invents facts like prices or dates. You get clear placeholders instead.
+- For a real business it never invents facts like prices or dates. For a made-up one it invents believable details and tells you which.
 - Reading a website is for your own business. Some sites block automated visits; then it asks for screenshots.
 
 MIT licence.
